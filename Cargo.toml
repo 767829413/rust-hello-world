@@ -7,3 +7,5 @@ edition = "2021"
 
 [dependencies]
 num = "0.4.0"
+utf8_slice = "1.0.0"
+twox-hash = "1.6.3"
