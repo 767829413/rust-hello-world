@@ -1,3 +1,6 @@
+# 猜字谜游戏
+
+```rust
 use std::io;
 
 use rand::Rng;
@@ -31,3 +34,4 @@ fn main() {
         }
     }
 }
+```

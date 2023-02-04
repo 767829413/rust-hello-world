@@ -30,6 +30,7 @@ name = "hello-world"
 version = "0.1.0"
 dependencies = [
  "num",
+ "rand",
  "twox-hash",
  "utf8_slice",
 ]
