@@ -18,7 +18,10 @@ fn main() {
 
         let guess_number: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(err) => continue,
+            Err(err) => {
+                println!("input parse err: {}", err);
+                continue;
+            }
         };
 
         if guess_number > secret_number {

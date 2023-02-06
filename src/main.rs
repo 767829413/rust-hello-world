@@ -1,33 +1,8 @@
-use std::io;
-
-use rand::Rng;
+mod mod1;
+mod mod2;
 fn main() {
-    println!("Guess the number");
-
-    let secret_number = rand::thread_rng().gen_range(1..100);
-
-    loop {
-        // 获取用户输入
-        println!("Please input your guess:");
-
-        let mut guess = String::new();
-        io::stdin().read_line(&mut guess).unwrap();
-
-        let guess_number: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(err) => continue,
-        };
-
-        if guess_number > secret_number {
-            println!("too high");
-        } else if guess_number < secret_number {
-            println!("too low");
-        } else {
-            println!(
-                "Congratulations, you answered correctly! The correct number is {}",
-                guess_number
-            );
-            break;
-        }
-    }
+    println!("{}", mod1::MESSAGE);
+    println!("{}", mod2::MESSAGE2);
+    println!("{}", mod2::mod2_a::MESSAGE2_A);
+    println!("{}", mod2::mod2_b::MESSAGE2_B);
 }
