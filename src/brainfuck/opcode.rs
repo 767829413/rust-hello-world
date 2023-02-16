@@ -66,6 +66,7 @@ impl Code {
         let mut jstack: Vec<usize> = Vec::new();
         let mut jtable: std::collections::HashMap<usize, usize> = std::collections::HashMap::new();
 
+        // 构造一个栈来记录[]的位置
         for (i, e) in instrs.iter().enumerate() {
             if Opcode::LB == *e {
                 jstack.push(i)
@@ -73,6 +74,7 @@ impl Code {
             if Opcode::RB == *e {
                 let j = jstack.pop().ok_or("pop from is empyt list")?;
                 jtable.insert(i, j);
+                jtable.insert(j, i);
             }
         }
 
