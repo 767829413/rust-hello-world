@@ -1,1 +1,0 @@
-pub const MESSAGE2_A: &str = "hi2_A";

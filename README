@@ -1,3 +1,5 @@
 # 快速学习 rust 入门
 
 [环境搭建](https://fyjsnb.eu.org/#/./docs/Rust/wsl2-vscode-dev)
+
+**目标是实现一个brainfuck解释器**
